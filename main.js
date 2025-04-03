@@ -15,12 +15,19 @@ let bill = 0
      calculate()
  }
  
+ 
+ function reciveTipPercentageValue(value){
+     tipPercentage = value / 100
+ 
+     buttonSelected = document.querySelector("")
+ 
+ }
+ 
  function reciveBillValue(){
      console.log(billInput.valueAsNumber)
      bill = billInput.valueAsNumber
  
      calculate()
- {}
  
  }
  
