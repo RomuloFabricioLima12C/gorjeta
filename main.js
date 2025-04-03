@@ -29,10 +29,13 @@ let bill = 0
      calculate()
  }
  
+ function reciveCustomTipPercentageValue(){
+     tipPercentage = document.querySelector("#custom-tip").valueAsNumber / 100
+ 
      removeClassButtonSelected()
  
      calculate()
- 
+ }
  
  function removeClassButtonSelected(){
  
@@ -44,7 +47,7 @@ let bill = 0
  }
  
  function reciveBillValue(){
-     console.log(billInput.valueAsNumber)
+
      bill = billInput.valueAsNumber
  
      calculate()
@@ -53,6 +56,7 @@ let bill = 0
  
  
  function calculate(){
+     if (bill !==0 && tipPercentage !==0 && numberOfPeople !==0){
          let tipAmountStrong = document.querySelector(".amount strong")
          let tipAmountPerson = bill * tipPercentage / numberOfPeople
  
@@ -64,4 +68,20 @@ let bill = 0
          totalStrong.innerText = `$${totalPerson.toFixed(2)}`
  
      }
+ }
  
+ function reset(){
+     billInput.value = ""
+     bill = 0
+ 
+     tipPercentage = 0
+ 
+     removeClassButtonSelected()
+     document.querySelector("#custom-tip").value = ""
+ 
+     numberOfPeopleInput.value = ""
+     numberOfPeople = 0
+ 
+     document.querySelector(".amount strong").innerText = "$0.00"
+     document.querySelector(".total strong").innerText = "$0.00"
+ }
