@@ -99,6 +99,10 @@
  
          }
  
+         .button-selected {
+             background: var(--topaz);
+         }
+ 
          input{
              width: 100%;
              font-size: 2.4rem;
@@ -197,7 +201,7 @@
          flex-direction: column;
          justify-content: space-between;
  
-         .amount p,
+         .amount,
          .total p{
              font-size: 1.6rem;
          }
@@ -213,5 +217,5 @@
              transition: .5s;
  
          }
-        }
+     }
     }
