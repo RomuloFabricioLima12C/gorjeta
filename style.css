@@ -190,19 +190,12 @@
          grid-template-columns: repeat(3, 1fr);
  
          button:hover{
-             background: var(--topaz);
              background: var(--water-leaf);
              cursor: pointer;
              transition: .5s;
  
          }
      }
- 
-     input::-webkit-inner-spin-button
-     input::-webkit-outer-spin-button{
-         display: none;
-     }
- 
      
      .results{
          display: flex;
