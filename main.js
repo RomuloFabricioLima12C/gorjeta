@@ -20,6 +20,18 @@ let bill = 0
      tipPercentage = value / 100
  
      buttonSelected = document.querySelector("")
+     removeClassButtonSelected()
+ 
+     buttonSelected = document.querySelector(`#button-${value}`)
+     buttonSelected.classList.add("button-selected")
+ }
+ 
+ function removeClassButtonSelected(){
+ 
+         if (buttonSelected !== null) {
+          buttonSelected.classList.remove("button-selected")
+          buttonSelected = null
+         }
  
  }
  
@@ -31,11 +43,6 @@ let bill = 0
  
  }
  
- function reciveTipPercentageValue(value){
-     buttonSelected = document.querySelector("")
-     
- 
- }
  
  function calculate(){
      if (bill !==0 && tipPercentage !==0 && numberOfPeople !==0){
